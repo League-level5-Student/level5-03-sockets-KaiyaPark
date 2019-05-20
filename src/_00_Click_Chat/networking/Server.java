@@ -10,6 +10,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 public class Server {
 	private int port;
@@ -20,7 +21,7 @@ public class Server {
 	ObjectOutputStream os;
 	ObjectInputStream is;
 
-	public Server(int port) {
+	public Server(int port, JTextField text) {
 		this.port = port;
 	}
 
@@ -62,10 +63,10 @@ public class Server {
 		return port;
 	}
 
-	public void sendClick() {
+	public void sendClick(String str) {
 		try {
 			if (os != null) {
-				os.writeObject("CLICK SENT FROM SERVER");
+				os.writeObject(str);
 				os.flush();
 			}
 		} catch (IOException e) {

@@ -19,7 +19,7 @@ public class ButtonClicker extends JFrame {
 	}
 	
 	public ButtonClicker(){
-		
+		/*
 		int response = JOptionPane.showConfirmDialog(null, "Would you like to host a connection?", "Buttons!", JOptionPane.YES_NO_OPTION);
 		if(response == JOptionPane.YES_OPTION){
 			server = new Server(8080);
@@ -48,6 +48,6 @@ public class ButtonClicker extends JFrame {
 			setSize(400, 300);
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			client.start();
-		}
+		}*/
 	}
 }
