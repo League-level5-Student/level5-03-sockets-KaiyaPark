@@ -52,7 +52,7 @@ public class Client {
 	public void sendClick() {
 		try {
 			if (os != null) {
-				os.writeObject("CLICK SENT FROM CLIENT");
+				os.writeObject("Sent from Client: " + JOptionPane.showInputDialog(null, "message"));
 				os.flush();
 			}
 		} catch (IOException e) {

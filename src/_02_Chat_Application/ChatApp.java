@@ -30,8 +30,9 @@ public class ChatApp {
 	}
 	ChatApp(){
 		int response = JOptionPane.showConfirmDialog(null, "Wanna host the connection?", "Connections Y'all", JOptionPane.YES_NO_OPTION);
+	//	server = new Server(8080, textServer);
 		if (response == JOptionPane.YES_OPTION) {
-			server = new Server(8080, textServer);
+		
 			JOptionPane.showMessageDialog(null, "Server started at: " + server.getIPAddress() + "\nPort: " + server.getPort());
 			frame.add(panel);
 			panel.add(serverL);
@@ -42,7 +43,7 @@ public class ChatApp {
 			frame.setVisible(true);
 			frame.pack();
 			enter.addActionListener((e) ->{
-				server.sendClick(textServer.getText());
+				//server.sendClick(textServer.getText());
 				textServer.setText(null);
 			});
 		}
@@ -57,7 +58,7 @@ public class ChatApp {
 			frame.setVisible(true);
 			frame.pack();
 			enter.addActionListener((e) ->{
-				server.sendClick(textClient.getText());
+				//client.sendClick(textClient.getText());
 				textClient.setText(null);
 			});
 		}
